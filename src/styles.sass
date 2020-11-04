@@ -1,1 +1,165 @@
-/* You can add global styles to this file, and also import other style files */
+$bg-gray: #464646
+$bg-green: #bbd550
+$bg-text: #888888
+
+body
+    font-family: 'Open Sans'!important
+    margin: 0
+    font-size: 1rem
+    font-weight: 400
+    color: #212529
+    text-align: left
+    background-color: #fff
+    line-height: 1
+
+.d-flex.justify-content-md-center.container-forms
+    height: auto
+    position: absolute
+    width: 100%
+    top: 50%
+    transform: translateY(-50%)
+
+nav.navbar.navbar-light.header
+    background: $bg-gray
+
+a.navbar-brand.header-img
+    display: flex
+    justify-content: center
+    transform: translateX(169px)
+
+button.btn.btn-green
+    color: #fff
+    background-color: $bg-green
+    border-color: $bg-green
+    width: 100%
+    height: 51px
+    border-radius: 5px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 29px
+    font-weight: 600
+
+.btn.focus, .btn.btn-green:focus
+    outline: 0
+    box-shadow: 0 0 0 2px #98b424
+
+.card.container
+    filter: drop-shadow(1px 1.732px 9px rgba(0, 0, 0, 0.17))
+    width: 52%
+    filter-padding-left: 71px
+    filter-padding-right: 71px
+    padding-top: 26px
+    padding-bottom: 26px
+/* height: auto; */
+
+.title-card
+    font-size: 45px
+    color: #36aadd
+    font-weight: 400
+    font-family: "Open Sans"
+
+label.text-generic
+    color: $bg-text
+    font-size: 16px
+
+select.custom-select.input-figure
+    border-radius: 0
+    color: #495057
+    background: none
+
+input.form-control.input-figure
+    border-radius: 0
+    color: #495057
+    background: none
+
+.separator
+    border-top: 0!important
+
+.box-select
+    position: relative
+    width: 100%
+    display: flex
+    align-items: center
+
+.box-select img.ico-devron
+    position: absolute
+    width: 16px
+    right: 6px
+    pointer-events: none
+
+.box-blue
+    position: absolute
+    width: 100%
+    height: 61%
+    background-color: #36aadd
+    top: 50%
+    transform: translateY(-50%)
+
+@media (max-width: 991px) and (min-width: 768px)
+    .card.container 
+        filter: drop-shadow(1px 1.732px 9px rgba(0, 0, 0, 0.17))
+        // /* width: 87%; */
+        padding-left: 71px
+        padding-right: 71px
+        /* padding-top: 26px; */
+        padding-bottom: 26px
+        width: 100%
+
+    .input-primary.col-md-6
+        flex: 0 0 100%
+        max-width: 100%
+
+    .input-second.col-md-6
+        flex: 0 0 100%
+        max-width: 100%
+
+    .input-three.col-md-4
+        flex: 0 0 35%
+        max-width: 100%
+
+    .input-four.col-md-8.mb-3.mt-2 
+        flex: 0 0 100%
+        max-width: 100%
+
+
+@media (max-width: 768px)
+
+    .input-primary.col-md-6
+        width: 100%
+
+    .input-second.col-md-6
+        width: 54%
+
+    .input-three.col-md-4
+        width: 46%
+
+    // .card.container.card-responsive
+    //     padding-left: 5px
+    //     padding-right: 5px
+    //     border-top: 8px solid #36aadd
+    //     width: 100%
+
+    a.navbar-brand.header-img
+        display: flex
+        justify-content: center
+        transform: translateX(125px)
+
+    .title-card
+        font-size: 30px
+
+@media (max-width: 425px)
+    .card.container.card-responsive
+        padding-left: 5px
+        padding-right: 5px
+        width: 100%
+        height: 407px
+    .separator
+        display: block
+        border-top: 8px solid #36aadd!important
+        width: 100%
+
+    // a.navbar-brand.header-img
+    //     display: flex
+    //     width: 100%

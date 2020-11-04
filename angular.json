@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ilumno"
+    }
+  },
+  "defaultProject": "ilumno",
+  "cli": {
+    "analytics": "814dedd5-c124-44b3-82a3-41c112202e50"
+  }
 }

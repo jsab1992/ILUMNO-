@@ -1,0 +1,82 @@
+<div class="card container card-responsive">
+  <form class="needs-validation" [formGroup]="forma" (ngSubmit)="guardar()">
+    <div class="form-row">
+      <div class="text-center w-100">
+        <h3 class="title-card">Cotiza tu Seguro Automotriz</h3>
+        <h6 class="text-secondary">¡Resultados Instantáneos!</h6>
+      </div>
+      <div class="separator"></div>
+      <div class="input-primary col-md-6 mt-3">
+        <label class="text-generic">Marca de auto</label>
+        <div class="box-select">
+          <img class="ico-devron" src="assets/ico/chevron-abajo.svg" alt="" />
+          <select
+            class="custom-select input-figure"
+            [class.is-invalid]="
+              forma.get('marca').invalid && forma.get('marca').touched
+            "
+            formControlName="marca"
+          >
+            <option value=""></option>
+            <option *ngFor="let marca of cars.marcas" [value]="marca.id">
+              {{ marca.nombre }}
+            </option>
+          </select>
+        </div>
+        <div class="invalid-feedback">Please select a valid state.</div>
+      </div>
+      <div class="input-second col-md-6">
+        <label class="text-generic mt-3">Modelo del auto</label>
+        <div class="box-select">
+          <img class="ico-devron" src="assets/ico/chevron-abajo.svg" alt="" />
+          <select
+            class="custom-select input-figure"
+            [class.is-invalid]="
+              forma.get('auto').invalid && forma.get('auto').touched
+            "
+            formControlName="auto"
+          >
+            <option *ngFor="let modelo of modelos.modelos">{{ modelo }}</option>
+          </select>
+        </div>
+        <div class="invalid-feedback">Please select a valid state.</div>
+      </div>
+
+      <div class="input-three col-md-4">
+        <label class="text-generic mt-3">Año</label>
+        <div class="box-select">
+          <img class="ico-devron" src="assets/ico/chevron-abajo.svg" alt="" />
+          <select
+            class="custom-select input-figure"
+            [class.is-invalid]="
+              forma.get('año').invalid && forma.get('año').touched
+            "
+            formControlName="año"
+          >
+            <option *ngFor="let year of anos" [value]="year">{{ year }}</option>
+            
+          </select>
+        </div>
+        <div class="invalid-feedback">Please provide a valid city.</div>
+      </div>
+      <div class="input-four col-md-8 mb-3 mt-3">
+        <label class="text-generic">Email</label>
+        <input
+          class="form-control input-figure"
+          type="email"
+          [class.is-invalid]="
+            forma.get('correo').invalid && forma.get('correo').touched
+          "
+          formControlName="correo"
+        />
+        <div class="invalid-feedback">Please select a valid state.</div>
+      </div>
+    </div>
+
+    <button class="btn btn-green mb-3 mt-3" type="submit">Cotizar</button>
+    <div class="text-center">
+      <small class="text-info" for="invalidCheck"> Recuperar cotización </small>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
+  </form>
+</div>
